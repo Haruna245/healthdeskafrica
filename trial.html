@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./assets/bootstrap.min.css" rel="stylesheet">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/images/volun2.jpg");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+    <div class="bg-light shadow" id="navheader" style="margin-top: 0px;position: sticky;top: 0px;z-index: 1;">
+        <header class="d-flex flex-wrap justify-content-center py-1  border-bottom">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">HEDA</span>
+          </a>
+      
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link" style="" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="donation.html" class="nav-link" >Donate</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link">FAQs</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link" style="border-bottom: 2px solid red;">About</a></li>
+          </ul>
+        </header>
+      </div>
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">I am John Doe</h1>
+    <p>And I'm a Photographer</p>
+    <button>Hire me</button>
+  </div>
+</div>
+
+<p>Page Content..</p>
+
+</body>
+</html>
