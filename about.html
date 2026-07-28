@@ -157,6 +157,53 @@
   }
 }
 
+
+/* AFRICHEL logo sizing */
+.site-logo {
+  display: block;
+  width: auto;
+  height: 58px;
+  max-width: 190px;
+  object-fit: contain;
+}
+#navheader header > a:first-child {
+  min-height: 64px;
+  padding-left: .5rem;
+}
+@media (max-width: 767px) {
+  .site-logo {
+    height: 46px;
+    max-width: 150px;
+    margin: 0 auto .25rem;
+  }
+  #navheader header > a:first-child {
+    width: 100%;
+    justify-content: center;
+    min-height: 50px;
+    padding-left: 0;
+  }
+}
+
+
+/* Center logo precisely on mobile */
+@media (max-width: 767px) {
+  #navheader header {
+    justify-content: center !important;
+  }
+  #navheader header > a:first-child {
+    display: flex !important;
+    width: 100% !important;
+    margin: 0 auto .35rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  #navheader .site-logo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
 </style>
 </head>
 <body style="padding: 0px;margin: 0px;height: 100%;">
@@ -164,7 +211,7 @@
         <header class="d-flex flex-wrap justify-content-center py-1 border-bottom">
           <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-            <span class="brand-lockup"><strong>AFRICHEL</strong><span>Health for All</span></span>
+            <img class="site-logo" src="assets/hdk-profile/africhel-logo.png" alt="AFRICHEL - Health for All">
           </a>
           <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm align-items-center" id="pillNav2" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--africhel-teal); --bs-nav-pills-link-active-bg: var(--bs-white);">
             <li class="nav-item"><a class="nav-link rounded-5" href="index.html">Home</a></li>
