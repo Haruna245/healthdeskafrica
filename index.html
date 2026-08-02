@@ -350,10 +350,47 @@
   #support-title {
     color: #A25772;
   }
+
+  .donation-package-card {
+    border: 1px solid rgba(0, 140, 140, .16);
+    border-radius: .5rem;
+    box-shadow: 0 .75rem 1.5rem rgba(9, 38, 53, .08);
+    height: 100%;
+  }
+
+  .donation-package-card .amount {
+    color: var(--africhel-teal);
+    font-size: 2rem;
+    font-weight: 800;
+  }
+
+  .join-us-section .card {
+    border-radius: .5rem;
+    overflow: hidden;
+  }
+
+  .join-us-section .card-body {
+    min-height: 230px;
+  }
+
+
+
+  .site-footer {
+    padding: 1.5rem 2rem;
+  }
+
+  .site-footer p,
+  .site-footer ul {
+    margin-bottom: .45rem;
+  }
   
   @media (max-width: 768px) {
     .donation-banner {
       min-height: auto;
+    }
+
+    .site-footer {
+      padding: 1.25rem 1rem;
     }
   }
     
@@ -374,6 +411,13 @@
 .nav-pills .nav-link:hover { background: rgba(255,255,255,.16); }
 
 
+
+#navheader {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  width: 100%;
+}
 /* AFRICHEL mobile nav polish */
 #pillNav2 {
   width: 100%;
@@ -514,8 +558,7 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body style="padding: 0px;margin: 0px;background: rgba(238, 174, 202, 0.507);
-  background: radial-gradient(circle, rgba(238, 174, 202, 0.952) 0%, rgba(148, 188, 233, 0.534) 100%);">
+  <body style="padding: 0px;margin: 0px;background: #fff;">
     <!-- <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -611,7 +654,7 @@
   </header>
 </div> -->
 
-<div class="bg-light shadow" id="navheader" style="margin-top: 0px;position: sticky;top: 0px;z-index: 1;">
+<div class="bg-light shadow" id="navheader" style="margin-top: 0px;">
         <header class="d-flex flex-wrap justify-content-center py-1 border-bottom">
           <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
@@ -710,9 +753,36 @@
   <div class="marketing" style="">
 
     
-    <div class="container p-4 text-center">
-      <p class="text-dark" id="emp-para" style="">Empowering communities through health literacy, prevention, screening, and trusted referral.</p>
+    <div class="container-fluid px-0 text-center">
+      <!-- <p class="text-dark" id="emp-para" style="">Empowering communities through health literacy, prevention, screening, and trusted referral.</p>
       
+    </div> -->
+
+    <div class="p-4 text-center" style="background-color: #fff">
+      <p  style="font-size: 40px;font-weight: bold;margin-top: 50px;">OUR IMPACT </p>
+      <p class="text-center" style="font-size: 25px">
+        Through the collective efforts of our Team, volunteers, donors and sponsors</p>
+        <p style="font-size: 20px">We have reached</p>
+      <div class="d-flex  justify-content-around">
+        <div>
+          <h2 class="text-primary">+7,000</h2>
+          <p>people</p>
+        </div>
+        <div>
+          <h2 class="text-primary">+3,000</h2>
+          <p>people indirectly</p>
+        </div>
+        <div>
+          <h2 class="text-primary">+2,000</h2>
+          <p>people directly</p>
+        </div>
+        <div>
+          <h2 class="text-primary">50+</h2>
+          <p>communities</p>
+        </div>
+      </div>
+      
+
     </div>
 
     <!-- <div class="p-4 shadow" style="background-color: #092635;">
@@ -820,11 +890,11 @@
 
     <!-- cards -->
   
-    <div class="album py-5 bg-light">
+    <div class="album py-5 bg-white">
       <div class="py-3" style="">
 
         <div class="container" >
-          <p class="text-center" style="font-size: 40px;font-weight: bold;">Areas of work</p>
+          <p class="text-center" style="font-size: 40px;font-weight: bold;">Programs</p>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
               <div class="card shadow-sm">
@@ -987,10 +1057,7 @@
     
 
     <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette p-3">
+    <!-- <div class="row featurette p-3">
       <div class="col-md-7">
         <h2 class="featurette-heading fw-normal lh-1" style="font-weight: bold;color:darkblue ;">Our core approaches </h2>
         <p class="lead">Across all our programmes we focus on building communities that are resilient, inclusive and accountable.
@@ -998,12 +1065,11 @@
            ensuring that the people we work with have the capacity to bring about change in their own lives.</p>
       </div>
       <div class="col-md-5">
-        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
         <img src="assets/images/schlib 1.png" alt="" style="height:400px ;width: 100%;border-radius: 10px;">
       </div>
-    </div>
+    </div> -->
 
-    <hr class="featurette-divider">
+    <!-- <hr class="featurette-divider">
 
     <div class="row featurette p-3">
       <div class="col-md-7 order-md-2">
@@ -1021,12 +1087,11 @@
       </p>
       </div>
       <div class="col-md-5 order-md-1">
-        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
         <img src="assets/images/partnerShip.jpg" alt="" style="height:450px ;width: 100%;border-radius: 10px;">
       </div>
-    </div>
+    </div> -->
 
-    <hr class="featurette-divider">
+    <!-- <hr class="featurette-divider">
 
     <div class="row featurette p-3">
       <div class="col-md-7">
@@ -1037,10 +1102,9 @@
         </p>
       </div>
       <div class="col-md-5">
-        <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg> -->
         <img src="assets/images/advocacy1 1.png" alt="" style="height:400px ;width: 100%;border-radius: 10px;">
       </div>
-    </div>
+    </div> -->
 
     <hr class="featurette-divider">
 
@@ -1058,12 +1122,12 @@
         </div>
     </div> -->
     
-    <section class="py-3 bg-light">
-      <div class="container">
+    <section class="py-4 bg-white join-us-section">
+      <div class="container-fluid px-4 px-lg-5">
         <h2 class="display-5 fw-bold text-center">Join Us</h2>
         <p class="lead text-center mb-4">You can join us by registering using the links below</p>
         
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 justify-content-center">
           <!-- Card 1 -->
           <div class="col">
             <div class="card h-100 shadow-sm">
@@ -1126,8 +1190,8 @@
 
    <!--  New Cards -->
     </div>
-    <div class="p-4 text-center" style="background-color: #e7eaef73">
-      <p  style="font-size: 40px;font-weight: bold;margin-top: 50px;">OUR IMPACT /INFLUENCE  </p>
+    <!-- <div class="p-4 text-center" style="background-color: #fff">
+      <p  style="font-size: 40px;font-weight: bold;margin-top: 50px;">OUR IMPACT </p>
       <p class="text-center" style="font-size: 25px">
         Through the collective efforts of our Team, volunteers, donors and sponsors</p>
         <p style="font-size: 20px">We have reached</p>
@@ -1151,7 +1215,7 @@
       </div>
       
 
-    </div>
+    </div> -->
 
     <!-- <div class="m-4">
       <div class="mt-5 mb-4">
@@ -1168,20 +1232,20 @@
       </div>
   </div> -->
 
-<div class="bg-light">
-  <div class="container py-4">
-    <!-- Title Section -->
+<div class="bg-white">
+  <!-- <div class="container py-4">
+    
     <div class="row mb-4">
       <div class="col-12 text-center">
         <h2 class="events-title fw-bold mb-3">RECENT AND UPCOMING EVENTS</h2>
       </div>
     </div>
     
-    <!-- Gallery Section -->
+    
     <div class="row">
       <div class="col-12">
         <div class="scroll-container-gallery pb-3">
-          <!-- Gallery Items -->
+          
           <div class="gallery-item px-2">
             <div class="card shadow-sm" style="width: 300px;">
               <div class="card-img-wrapper">
@@ -1209,7 +1273,6 @@
       </div>
     </div>
     
-    <!-- Scroll Hint -->
     <div class="row">
       <div class="col-12 text-center text-muted mt-2">
         <small>
@@ -1221,7 +1284,7 @@
         </small>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
@@ -1234,57 +1297,43 @@
       <div class="text-center mb-5">
         <h2 class="display-4 fw-bold text-primary" id="support-title">Support Us</h2>
       </div>
-      
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <div class="card donation-banner border-0 shadow">
-            <div class="card-body p-md-5 p-3 text-white">
-              <h2 class="card-title text-center mb-4 display-5 fw-bold text-light">Support us with a donation</h2>
-              
-              <div class="row justify-content-center mb-4">
-                <div class="col-lg-10">
-                  <h3 class="text-center mb-4 fw-bold donation-subtitle">Account Details</h3>
-                  
-                  <div class="row g-4">
-                    <!-- MTN Mobile Money Payment Option -->
-                    <div class="col-md-6">
-                      <div class="card h-100 bg-dark border-secondary">
-                        <div class="card-body p-4">
-                          <h4 class="card-title text-center mb-3 text-warning fw-bold">MTN Mobile Money</h4>
-                          <div class="mb-4">
-                            <h6 class="text-white-50 mb-2">Account Name</h6>
-                            <h3 class="text-light fw-bold">Organizational account to be confirmed</h3>
-                          </div>
-                          <div>
-                            <h6 class="text-white-50 mb-2">Account Number</h6>
-                            <h3 class="text-light fw-bold">MTN MoMo merchant account pending</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    <!-- Bank Transfer Payment Option -->
-                    <div class="col-md-6">
-                      <div class="card h-100 bg-dark border-secondary">
-                        <div class="card-body p-4">
-                          <h4 class="card-title text-center mb-3 text-warning fw-bold">Bank Transfer</h4>
-                          <div class="mb-4">
-                            <h6 class="text-white-50 mb-2">Account Name</h6>
-                            <h3 class="text-light fw-bold">AFRICHEL (African Center for Health Equity and Literacy)</h3>
-                          </div>
-                          <div>
-                            <h6 class="text-white-50 mb-2">Account Number</h6>
-                            <h3 class="text-light fw-bold">Corporate bank details to be confirmed</h3>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+        <div class="col">
+          <div class="card donation-package-card">
+            <div class="card-body p-4">
+              <div class="amount">GHS 100</div>
+              <p class="mb-0">Screens a family of four for high blood pressure and blood sugar.</p>
             </div>
           </div>
         </div>
+        <div class="col">
+          <div class="card donation-package-card">
+            <div class="card-body p-4">
+              <div class="amount">GHS 500</div>
+              <p class="mb-0">Supplies hygiene materials and health education for one classroom.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card donation-package-card">
+            <div class="card-body p-4">
+              <div class="amount">GHS 2,000</div>
+              <p class="mb-0">Funds a full market outreach day with consumables and volunteer support.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card donation-package-card">
+            <div class="card-body p-4">
+              <div class="amount">GHS 5,000</div>
+              <p class="mb-0">Enrols one school in the School Health Program for a full academic year.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a class="btn btn-primary btn-lg rounded-5 px-4" href="donation.html">Go to donation page</a>
       </div>
     </div>
     <!-- /.container -->
@@ -1304,7 +1353,7 @@
     </ul>
   </footer> -->
 </main>
-<footer class="bg-dark text-white p-5">
+<footer class="bg-dark text-white site-footer">
   <p class="float-end"><a class="btn btn-primary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center" href="#navheader" role="button" aria-label="Back to top" style="width: 38px;height: 38px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg></a></p>
   <p>&copy; 2023–2024 AFRICHEL. &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="partners.html">Partner With Us</a></p>
   <div class="text-center">
