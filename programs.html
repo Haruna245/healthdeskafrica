@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs</title>
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root { --africhel-navy:#092635; --africhel-teal:#008c8c; --africhel-teal-dark:#006f70; --africhel-gold:#e2b63d; --africhel-accent:#A25772; --africhel-light:#f6fafa; }
+    body, html { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f1f3f5; scroll-behavior: smooth; }
+    .bg-primary { background-color: var(--africhel-teal) !important; }
+    .btn-primary { --bs-btn-bg: var(--africhel-teal); --bs-btn-border-color: var(--africhel-teal); --bs-btn-hover-bg: var(--africhel-teal-dark); --bs-btn-hover-border-color: var(--africhel-teal-dark); }
+    .nav-pills .nav-link.active { color: var(--africhel-teal) !important; }
+    .nav-pills .nav-link:hover { background: rgba(255,255,255,.16); }
+    #navheader { position: sticky; top: 0; z-index: 1030; width: 100%; }
+    #pillNav2 { width: 100%; justify-content: center; align-items: center; padding: 0.45rem !important; border-radius: 1.25rem !important; }
+    #pillNav2 .nav-link, #pillNav2 .dropdown-toggle { border: 0; min-width: 72px; padding: 0.58rem 0.9rem; color: #fff !important; background: transparent; font-weight: 700; line-height: 1.1; text-align: center; }
+    #pillNav2 .nav-link.active { color: var(--africhel-teal) !important; background: #fff !important; }
+    #pillNav2 .dropdown-toggle:hover, #pillNav2 .dropdown-toggle:focus { color: #fff !important; background: rgba(255,255,255,.14); }
+    .site-logo { display: block; width: auto; height: 58px; max-width: 190px; object-fit: contain; }
+    #navheader header > a:first-child { min-height: 64px; padding-left: .5rem; }
+    .program-hero { background: linear-gradient(rgba(9,38,53,.72), rgba(9,38,53,.72)), url("assets/images/health2.jpg") center/cover no-repeat; color: #fff; padding: 90px 16px; }
+    .program-hero h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); font-weight: 800; }
+    .program-section { scroll-margin-top: 100px; padding: 64px 0; border-bottom: 1px solid #dfe4e8; background: #f6f7f8; }
+    .program-section:nth-of-type(even) { background: #e9ecef; }
+    .program-section h2 { color: var(--africhel-accent); font-weight: 800; }
+    .program-section img { width: 100%; min-height: 280px; max-height: 420px; object-fit: cover; border-radius: 8px; box-shadow: 0 14px 32px rgba(9,38,53,.14); }
+    .accordion-button:not(.collapsed) { color: var(--africhel-navy); background: var(--africhel-light); box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 rgba(0,140,140,.2); }
+    .section-kicker { color: var(--africhel-teal); font-weight: 800; text-transform: uppercase; font-size: .85rem; letter-spacing: .08em; }
+    .site-footer { padding: 1.5rem 2rem; }
+    .site-footer p, .site-footer ul { margin-bottom: .45rem; }
+    @media (min-width: 768px) {
+      #navheader header { align-items: center; flex-wrap: nowrap !important; padding-left: 1.25rem; padding-right: 1.25rem; }
+      #pillNav2 { width: auto !important; margin-left: auto; border-radius: 999px !important; }
+      #pillNav2 .nav-link, #pillNav2 .dropdown-toggle { min-width: 86px; }
+    }
+    @media (max-width: 767px) {
+      #navheader header { justify-content: center !important; padding-left: .5rem; padding-right: .5rem; }
+      #navheader header > a:first-child { display: flex !important; width: 100% !important; min-height: 50px; margin: 0 auto .35rem !important; justify-content: center !important; padding-left: 0; }
+      .site-logo { height: 46px; max-width: 150px; margin: 0 auto .25rem; }
+      #pillNav2 { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .35rem !important; border-radius: 0 0 1.35rem 1.35rem !important; }
+      #pillNav2 .nav-item, #pillNav2 .dropdown { width: 100%; }
+      #pillNav2 .nav-link, #pillNav2 .dropdown-toggle { width: 100%; min-width: 0; font-size: .9rem; white-space: nowrap; border-radius: 999px !important; }
+      .program-hero { padding: 64px 16px; }
+      .site-footer { padding: 1.25rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-light shadow" id="navheader">
+    <header class="d-flex flex-wrap justify-content-center py-1 border-bottom">
+      <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        <img class="site-logo" src="assets/hdk-profile/africhel-logo.png" alt="AFRICHEL - Health for All">
+      </a>
+      <ul class="nav nav-pills nav-fill gap-2 p-1 small bg-primary rounded-5 shadow-sm align-items-center" id="pillNav2" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--africhel-teal); --bs-nav-pills-link-active-bg: var(--bs-white);">
+        <li class="nav-item"><a class="nav-link rounded-5" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link rounded-5" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link rounded-5" href="donation.html">Donate</a></li>
+        <li class="nav-item"><a class="nav-link rounded-5" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link rounded-5" href="faq.html">FAQ</a></li>
+        <li class="nav-item dropdown">
+          <button class="nav-link rounded-5 dropdown-toggle active" type="button" data-bs-toggle="dropdown" aria-expanded="false">More</button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item active" href="programs.html">Programs</a></li>
+            <li><a class="dropdown-item" href="work.html">Our Work</a></li>
+            <li><a class="dropdown-item" href="impact.html">Impact</a></li>
+            <li><a class="dropdown-item" href="get-involved.html">Get Involved</a></li>
+            <li><a class="dropdown-item" href="activities.html">Gallery</a></li>
+            <li><a class="dropdown-item" href="partners.html">Partner With Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+  </div>
+
+  <main>
+    <section class="program-hero text-center">
+      <div class="container">
+        <p class="section-kicker text-white">AFRICHEL</p>
+        <h1>Programs</h1>
+        <p class="lead mx-auto" style="max-width: 760px;">Focused work in education, health, and community support, designed to build health literacy and practical wellbeing where people live, learn, and gather.</p>
+      </div>
+    </section>
+
+    <section class="program-section" id="education">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5"><img src="assets/images/Ghana_school_under_the_trees.jpg" alt="Education program"></div>
+          <div class="col-lg-7">
+            <p class="section-kicker">Education</p>
+            <h2>Education Programs</h2>
+            <p>We partner with schools and district education offices to build hygiene, self-care, health awareness, and mentoring into daily school life.</p>
+            <div class="accordion" id="educationAccordion">
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#educationCareer" aria-expanded="true" aria-controls="educationCareer">Career and mentorship</button></h3><div id="educationCareer" class="accordion-collapse collapse show" data-bs-parent="#educationAccordion"><div class="accordion-body">Through mentorship, skills development, and access to professional networks, AFRICHEL helps young people and volunteers build confidence, discover opportunities, and prepare for meaningful work in health, education, and social impact.</div></div></div>
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#educationSchool" aria-expanded="false" aria-controls="educationSchool">School health education</button></h3><div id="educationSchool" class="accordion-collapse collapse" data-bs-parent="#educationAccordion"><div class="accordion-body">We support schools with practical health talks, hygiene education, prevention messaging, and student-friendly activities that make healthy habits easier to understand and practice.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section" id="health">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5 order-lg-2"><img src="assets/images/health2.jpg" alt="Health program"></div>
+          <div class="col-lg-7 order-lg-1">
+            <p class="section-kicker">Health</p>
+            <h2>Health Programs</h2>
+            <p>Our health work focuses on education, screening, counselling, and referral support so people can identify risks early and seek care with confidence.</p>
+            <div class="accordion" id="healthAccordion">
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#healthMaternal" aria-expanded="true" aria-controls="healthMaternal">Maternal and child health</button></h3><div id="healthMaternal" class="accordion-collapse collapse show" data-bs-parent="#healthAccordion"><div class="accordion-body">We promote healthier mothers, children, and families through health education, community sensitization, prevention messages, and helpful information for informed maternal and child wellbeing decisions.</div></div></div>
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#healthMental" aria-expanded="false" aria-controls="healthMental">Mental health</button></h3><div id="healthMental" class="accordion-collapse collapse" data-bs-parent="#healthAccordion"><div class="accordion-body">We create safe spaces for mental health awareness and support, encourage open conversations, reduce stigma, and share practical resources that help people seek help early.</div></div></div>
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#healthScreening" aria-expanded="false" aria-controls="healthScreening">Community screening and referral</button></h3><div id="healthScreening" class="accordion-collapse collapse" data-bs-parent="#healthAccordion"><div class="accordion-body">Free community health education, blood pressure and blood sugar screening, counselling, and referral guidance help people find risks early and connect to care.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-section" id="community-support">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5"><img src="assets/images/community1.jpg" alt="Community support program"></div>
+          <div class="col-lg-7">
+            <p class="section-kicker">Community Support</p>
+            <h2>Community Support Programs</h2>
+            <p>We work with market associations, schools, faith groups, and neighbourhood leaders to bring trusted health information where people already are.</p>
+            <div class="accordion" id="communityAccordion">
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#communityWellbeing" aria-expanded="true" aria-controls="communityWellbeing">Wellbeing</button></h3><div id="communityWellbeing" class="accordion-collapse collapse show" data-bs-parent="#communityAccordion"><div class="accordion-body">We work toward stronger, more resilient communities. Our wellbeing activities bring together education, volunteer service, advocacy, and community outreach to support vulnerable people.</div></div></div>
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#communityOutreach" aria-expanded="false" aria-controls="communityOutreach">Market and neighbourhood outreach</button></h3><div id="communityOutreach" class="accordion-collapse collapse" data-bs-parent="#communityAccordion"><div class="accordion-body">AFRICHEL brings practical health information into markets, faith spaces, neighbourhoods, and community gatherings through trusted local relationships.</div></div></div>
+              <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#communityVolunteers" aria-expanded="false" aria-controls="communityVolunteers">Volunteer service</button></h3><div id="communityVolunteers" class="accordion-collapse collapse" data-bs-parent="#communityAccordion"><div class="accordion-body">Volunteers support outreaches, school programs, screening days, advocacy activities, and practical community engagement across AFRICHEL programs.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-dark text-white site-footer">
+    <p class="float-end"><a class="btn btn-primary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center" href="#navheader" role="button" aria-label="Back to top" style="width:38px;height:38px;">?</a></p>
+    <p>&copy; 2023-<span class="js-current-year">2026</span> AFRICHEL. &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="partners.html">Partner With Us</a></p>
+    <div class="text-center"><p>Keep in Touch</p><p style="font-size:35px">AFRICHEL</p><p>Health for All</p><p>info@africhel.com | +1 646 689 5287 | +233 (0)560 225 584</p></div>
+  </footer>
+  <script src="./assets/bootstrap.bundle.min.js"></script>
+</body>
+</html>

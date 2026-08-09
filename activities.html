@@ -98,7 +98,7 @@ body, html {
   }
 }
 
-.gallery-shell { background: #f8f9fa; padding: 24px 10px 40px; }
+.gallery-shell { background: #e9ecef; padding: 24px 10px 40px; }
 .gallery-intro { max-width: 850px; margin: 0 auto; color: #475467; font-size: 1.05rem; }
 .column img { background: #fff; box-shadow: 0 8px 22px rgba(9,38,53,0.12); transition: transform .2s ease, box-shadow .2s ease; object-fit: cover; }
 .column img:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(9,38,53,0.2); }
@@ -118,7 +118,61 @@ body, html {
 .column img { cursor: zoom-in; }
 .gallery-lightbox-img { width: 100%; max-height: 82vh; object-fit: contain; background: #111; border-radius: 8px; }
 .modal-content.gallery-modal { background: rgba(9,38,53,.96); border: 1px solid rgba(226,182,61,.45); }
-
+.masonry-gallery {
+  column-count: 4;
+  column-gap: 16px;
+  padding: 0 12px 28px;
+}
+.masonry-card {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 16px;
+  overflow: hidden;
+  break-inside: avoid;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(9,38,53,0.12);
+}
+.masonry-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+  transition: transform .2s ease;
+}
+.masonry-card:hover img {
+  transform: scale(1.03);
+}
+.activity-tag {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100% - 24px);
+  min-height: 30px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(0, 140, 140, .96);
+  color: #fff;
+  font-size: .82rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 6px 16px rgba(9,38,53,.25);
+  pointer-events: none;
+}
+@media screen and (max-width: 1100px) {
+  .masonry-gallery { column-count: 3; }
+}
+@media screen and (max-width: 800px) {
+  .masonry-gallery { column-count: 2; }
+}
+@media screen and (max-width: 560px) {
+  .masonry-gallery { column-count: 1; }
+}
 /* AFRICHEL mobile nav polish */
 #pillNav2 {
   width: 100%;
@@ -295,47 +349,76 @@ body, html {
 </div>
 
 <!-- Photo Grid -->
-<div class="gallery-shell"><div class="row"> 
-  <div class="column">
-    <img src="assets/images/advocacy.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/advocacy1.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/community2.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/Ghana_school_under_the_trees.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/health.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/directorImg1.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG-20250727-WA0004.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG-20250727-WA0005.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG-20250727-WA0006.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
+<div class="gallery-shell">
+  <div class="text-center mb-4">
+    <h2 class="fw-bold" style="color:#A25772;">Recent Activities</h2>
   </div>
-  <div class="column">
-    <img src="assets/images/whoweare.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/health2.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/Internship.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/mike-l-8Qr1ixi-rMU-unsplash.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/para.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG_14401.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-  </div>  
-  <div class="column">
-    <img src="assets/images/temp3.jpeg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/temp2.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/temp1.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/pic4.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/advocacy1.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/partnerShip1.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG-20250727-WA0007.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG-20250727-WA0008.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG-20250727-WA0009.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
+  <div class="masonry-gallery">
+    <figure class="masonry-card"><img src="assets/images/IMG_5518.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5513.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5509.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5486.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5441.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5432.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5406.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5404.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5401.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5400.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5384.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5377.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5353.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5352.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5349.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5336.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5333.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5332.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5325.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5320.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5315.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5308.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5305.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5288.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5284.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5278.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_5269.jpg" loading="lazy" alt="Recent Activities"><span class="activity-tag">Recent Activities</span></figure>
+    <figure class="masonry-card"><img src="assets/images/advocacy.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/advocacy1 1.png" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/advocacy1.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/community1.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/community2.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/directorImg1.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/flyer1.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/flyer2.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/Ghana_school_under_the_trees.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/health.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/health1.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/health2.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG_14401.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0004.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0005.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0006.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0007.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0008.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0009.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0010.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0011.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0012.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0013.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0014.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0015.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/IMG-20250727-WA0016.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/Internship.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/partnerShip 1.png" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/partnerShip.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/partnerShip1.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/schlib 1.png" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/schlib.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/underTree.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/volun1.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/volun2.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
+    <figure class="masonry-card"><img src="assets/images/whoweare.jpg" loading="lazy" alt="AFRICHEL gallery image"></figure>
   </div>
-  <div class="column">
-    <img src="assets/images/underTree.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/schAs.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/health2.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/IMG_14401.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/mnt.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-    <img src="assets/images/Ghana_school_under_the_trees.jpg" style="width:100%" loading="lazy" alt="AFRICHEL outreach gallery image">
-  </div>
-</div></div>
-
+</div>
 <footer class="bg-dark text-white p-5 mt-5">
     <p class="float-end"><a class="btn btn-primary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center" href="#navheader" role="button" aria-label="Back to top" style="width: 38px;height: 38px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/></svg></a></p>
     <p>&copy; 2023–2024 AFRICHEL. &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="partners.html">Partner With Us</a></p>
@@ -400,7 +483,7 @@ body, html {
 
   <script src="./assets/bootstrap.bundle.min.js"></script>
 <script>
-document.querySelectorAll('.column img').forEach(function(img){
+document.querySelectorAll('.masonry-card img').forEach(function(img){
   img.addEventListener('click', function(){
     var preview = document.getElementById('galleryPreviewImage');
     preview.src = img.getAttribute('src');

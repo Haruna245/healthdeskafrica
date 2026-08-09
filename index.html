@@ -165,7 +165,7 @@
       }
 
       .hero-image{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/Ghana_school_under_the_trees.JPG');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/IMG_5432.jpg');
           height: 300px;
           background-position: center;
           background-repeat: no-repeat;
@@ -191,7 +191,7 @@
       }
 
       .hero-image2{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/schlib.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/images/IMG_5305.jpg');
           height: 300px;
           background-position: center;
           background-repeat: no-repeat;
@@ -364,6 +364,31 @@
     font-weight: 800;
   }
 
+
+
+  .section-gray {
+    background: #f1f3f5 !important;
+  }
+
+  .section-soft {
+    background: #e9ecef !important;
+  }
+  .program-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .program-card-link .card {
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .program-card-link:hover .card,
+  .program-card-link:focus .card {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(9,38,53,.16) !important;
+  }
   .join-us-section .card {
     border-radius: .5rem;
     overflow: hidden;
@@ -558,7 +583,7 @@
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
   </head>
-  <body style="padding: 0px;margin: 0px;background: #fff;">
+  <body style="padding: 0px;margin: 0px;background: #f1f3f5;">
     <!-- <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -669,6 +694,7 @@
             <li class="nav-item dropdown">
               <button class="nav-link rounded-5 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">More</button>
               <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="programs.html">Programs</a></li>
                 <li><a class="dropdown-item" href="work.html">Our Work</a></li>
                 <li><a class="dropdown-item" href="impact.html">Impact</a></li>
                 <li><a class="dropdown-item" href="get-involved.html">Get Involved</a></li>
@@ -823,133 +849,49 @@
           
         </div>
       </div>
-    </div>
-    <div class=" p-4 bg-white w-100 h-100" style="margin-top: 0px; margin-bottom: 0px;" >
-      <!-- <p style="font-size: 30px;">AFRICHEL, the African Center for Health Equity and Literacy, is a pan-African nonprofit founded in Ghana by nurses, public health officers, and researchers. We build the knowledge and confidence people need to protect their health in markets, schools, neighbourhoods, and homes.</p> -->
-      <p class="text-center"  style="font-size: 40px;font-weight: bold;margin-top: 0px;color: #A25772">Activities</p><!-- class="text-primary" -->
-      <!-- <ul>
-        <li>Career and mentorship</li>
-        <li>MATERNAL AND CHILD HEALTH</li>
-        <li>MENTAL HEALTH</li>
-        <li>WELLBEING</li>
-      </ul> -->
-      <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Career and mentorship
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              Through mentorship, skills development, and access to professional networks, AFRICHEL helps young people and volunteers build confidence, discover opportunities, and prepare for meaningful work in health, education, and social impact.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              MATERNAL AND CHILD HEALTH
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              We promote healthier mothers, children, and families. Our activities focus on health education, community sensitization, basic prevention messages, and connecting families with helpful information so they can make informed decisions about maternal and child wellbeing.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              MENTAL HEALTH
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              We create safe spaces for mental health awareness and support, encourage open conversations, reduce stigma, and share practical resources that help people seek help early and care for one another with dignity.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-              WELLBEING
-            </button>
-          </h2>
-          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-             We work toward stronger, more resilient communities. Our wellbeing activities bring together education, volunteer service, advocacy, and community outreach to support vulnerable people and encourage healthier, safer, and more inclusive everyday lives.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    
-
-    <!-- cards -->
-  
-    <div class="album py-5 bg-white">
-      <div class="py-3" style="">
-
-        <div class="container" >
+    </div><!-- cards -->
+    <div class="album py-5 section-gray">
+      <div class="py-3">
+        <div class="container">
           <p class="text-center" style="font-size: 40px;font-weight: bold;">Programs</p>
           <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             <div class="col">
-              <div class="card shadow-sm">
-                <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-                 -->
-                 <img src="assets/images/Ghana_school_under_the_trees.JPG" style="width:100%; height:225px" alt="img">
-                 <div class="card-body">
-                  <p style="font-size:30px">EDUCATION</p>
-                  <p class="card-text">We partner with schools and district education offices to build hygiene, self-care, and health awareness into daily school life.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <!-- <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div> -->
-                    <small class="text-body-secondary"></small>
+              <a class="program-card-link" href="programs.html#education" aria-label="View Education programs">
+                <div class="card h-100 shadow-sm">
+                  <img src="assets/images/Ghana_school_under_the_trees.jpg" style="width:100%; height:225px; object-fit:cover;" alt="Education program">
+                  <div class="card-body">
+                    <p style="font-size:30px">EDUCATION</p>
+                    <p class="card-text">We partner with schools and district education offices to build hygiene, self-care, and health awareness into daily school life.</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col">
-              <div class="card shadow-sm">
-                <img src="assets/images/health2.JPG" style="width:100%; height:225px" alt="img">
-                <div class="card-body">
-                <p style="font-size:30px">HEALTH</p>
-                  <p class="card-text">Free community health education, blood pressure and blood sugar screening, counselling, and referral help people find risks early.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <!-- <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div> -->
-                    <small class="text-body-secondary"></small>
+              <a class="program-card-link" href="programs.html#health" aria-label="View Health programs">
+                <div class="card h-100 shadow-sm">
+                  <img src="assets/images/health2.jpg" style="width:100%; height:225px; object-fit:cover;" alt="Health program">
+                  <div class="card-body">
+                    <p style="font-size:30px">HEALTH</p>
+                    <p class="card-text">Free community health education, blood pressure and blood sugar screening, counselling, and referral help people find risks early.</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col">
-              <div class="card shadow-sm">
-                <img src="assets/images/community1.jpg" style="width:100%; height:225px" alt="img">
-                <div class="card-body">
-                  <p style="font-size:30px">Community Support</p>
-                  <p class="card-text">We work with market associations, schools, faith groups, and neighbourhood leaders to bring trusted health information where people already are.</p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <!-- div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div> -->
-                    <small class="text-body-secondary"></small>
+              <a class="program-card-link" href="programs.html#community-support" aria-label="View Community Support programs">
+                <div class="card h-100 shadow-sm">
+                  <img src="assets/images/community1.jpg" style="width:100%; height:225px; object-fit:cover;" alt="Community support program">
+                  <div class="card-body">
+                    <p style="font-size:30px">Community Support</p>
+                    <p class="card-text">We work with market associations, schools, faith groups, and neighbourhood leaders to bring trusted health information where people already are.</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
-  
+          </div>
         </div>
       </div>
-      </div>
+    </div>
 
     <!-- START THE FEATURETTES -->
     <!-- <div class="">
@@ -1122,7 +1064,7 @@
         </div>
     </div> -->
     
-    <section class="py-4 bg-white join-us-section">
+    <section class="py-4 section-soft join-us-section">
       <div class="container-fluid px-4 px-lg-5">
         <h2 class="display-5 fw-bold text-center">Join Us</h2>
         <p class="lead text-center mb-4">You can join us by registering using the links below</p>
@@ -1232,7 +1174,7 @@
       </div>
   </div> -->
 
-<div class="bg-white">
+<div class="section-gray">
   <!-- <div class="container py-4">
     
     <div class="row mb-4">
